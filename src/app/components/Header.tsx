@@ -1,7 +1,11 @@
+import {Title} from "./styled/Title.ts";
+
 export const Header = () => {
     return (
         <div>
-            <h1>Header</h1>
+            <Title>LekMED</Title>
+            <Title>aaassssss</Title>
+            <Title>aaa</Title>
         </div>
     )
 }

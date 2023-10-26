@@ -10,7 +10,7 @@ export const App = () => {
                 <Header/>
             </Bar>
             <div>
-                sdas
+                
             </div>
             <Bar>
                 <Footer/>
