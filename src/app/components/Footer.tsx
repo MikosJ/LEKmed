@@ -6,7 +6,6 @@ export const Footer = () => {
     <Bar>
       <Title>Kontakt</Title>
       <Title>Kontakt</Title>
-      <Title>Kontakt</Title>
     </Bar>
   );
 };
