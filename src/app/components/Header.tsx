@@ -5,8 +5,6 @@ export const Header = () => {
   return (
     <Bar>
       <Title>LekMED</Title>
-      <Title>aaassssss</Title>
-      <Title>aaa</Title>
     </Bar>
   );
 };
