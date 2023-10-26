@@ -4,7 +4,9 @@ import { Bar } from "./styled/Bar.ts";
 export const Footer = () => {
   return (
     <Bar>
-      <Title>LekMED</Title>
+      <Title>Kontakt</Title>
+      <Title>Kontakt</Title>
+      <Title>Kontakt</Title>
     </Bar>
   );
 };
