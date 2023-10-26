@@ -1,20 +1,15 @@
-import {Footer} from "./components/Footer.tsx";
-import {Header} from "./components/Header.tsx";
-import {Bar} from "./components/styled/Bar.ts";
-import {Content} from "./components/styled/Content.ts";
+import { Footer } from "./components/Footer.tsx";
+import { Header } from "./components/Header.tsx";
+import { Bar } from "./components/styled/Bar.ts";
 
 export const App = () => {
-    return (
-        <Content>
-            <Bar>
-                <Header/>
-            </Bar>
-            <div>
-                
-            </div>
-            <Bar>
-                <Footer/>
-            </Bar>
-        </Content>
-    )
-}
+  return (
+    <>
+      <Header />
+      <div>main</div>
+      <Bar>
+        <Footer />
+      </Bar>
+    </>
+  );
+};

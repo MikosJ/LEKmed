@@ -1,11 +1,12 @@
-import {Title} from "./styled/Title.ts";
+import { Title } from "./styled/Title.ts";
+import { Bar } from "./styled/Bar.ts";
 
 export const Header = () => {
-    return (
-        <div>
-            <Title>LekMED</Title>
-            <Title>aaassssss</Title>
-            <Title>aaa</Title>
-        </div>
-    )
-}
+  return (
+    <Bar>
+      <Title>LekMED</Title>
+      <Title>aaassssss</Title>
+      <Title>aaa</Title>
+    </Bar>
+  );
+};
