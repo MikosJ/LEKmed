@@ -1,6 +1,6 @@
 import { Footer } from "./Footer.tsx";
 import { Header } from "./Header.tsx";
-import { Main } from "./Main.tsx";
+import { MainContent } from "./styled/MainContent/MainContent.tsx";
 import { Content } from "./styled/Content";
 
 export const App = () => {
@@ -8,7 +8,7 @@ export const App = () => {
     <>
       <Content>
         <Header />
-        <Main />
+        <MainContent />
         <Footer />
       </Content>
     </>

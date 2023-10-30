@@ -1,17 +1,17 @@
-import { Title } from "./styled/Title.ts";
-import { Bar } from "./styled/Bar.ts";
-import {BarSection} from "./styled/BarSection.ts";
+import {Title} from "./styled/Bar/Title.ts";
+import {Bar} from "./styled/Bar/Bar.ts";
+import {BarSection} from "./styled/Bar/BarSection.ts";
+import {Logo} from "./styled/Bar/Logo.ts";
 
 export const Header = () => {
-  return (
-    <Bar $header>
-      <img src={"../svg/logo.svg"} alt={"logo"} height={"100px"}></img>
-        <BarSection>
-            <Title>Lekarze</Title>
-            <Title>O nas</Title>
-            <Title>Kontakt</Title>
-        </BarSection>
-
-    </Bar>
-  );
+    return (
+        <Bar $header={true}>
+            <Logo src={"../svg/logo.svg"}></Logo>
+            <BarSection>
+                <Title>Lekarze</Title>
+                <Title>O nas</Title>
+                <Title>Kontakt</Title>
+            </BarSection>
+        </Bar>
+    );
 };

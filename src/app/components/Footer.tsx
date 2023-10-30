@@ -1,9 +1,9 @@
-import { Title } from "./styled/Title.ts";
-import { Bar } from "./styled/Bar.ts";
+import { Title } from "./styled/Bar/Title.ts";
+import { Bar } from "./styled/Bar/Bar.ts";
 
 export const Footer = () => {
   return (
-    <Bar>
+    <Bar $header={false}>
       <Title>Kontakt</Title>
       <Title>Kontakt</Title>
     </Bar>
