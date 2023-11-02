@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Test = (props: Doctor) => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/rezerwacja");
-  };
 
   return (
     <>
@@ -14,7 +11,9 @@ export const Test = (props: Doctor) => {
       <img src={props?.image} alt={"brak zdjecia"} height={"100px"} />
       <a>{props.title}</a>
       <a>{props.specialization}</a>
-      <button onClick={handleClick}>Zarezerwuj</button>
+      <button onClick={() => navigate("/rezerwacja", { state: props })}>
+        Zarezerwuj
+      </button>
     </>
   );
 };
