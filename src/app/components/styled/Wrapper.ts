@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  border-radius: 1rem;
   height: 40vh;
   width: 20vw;
-  border: 1px solid black;
+  border: 2px solid #b72121;
   background: #9be8e8;
 `;
