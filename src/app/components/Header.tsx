@@ -8,7 +8,7 @@ export const Header = () => {
     <Bar $header={true}>
       <Logo src={"../svg/logo.svg"}></Logo>
       <BarSection>
-        <Title>Lekarze</Title>
+        <Title href={"/"}>Strona główna</Title>
         <Title>O nas</Title>
         <Title>Kontakt</Title>
       </BarSection>
