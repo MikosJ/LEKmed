@@ -4,10 +4,10 @@ export type Doctor = {
   image?: string;
   title: Title;
   specialization: Specialization;
-  schedule: Schedule;
+  schedule?: Schedule;
 };
 
-export type Title = "Dr." | "Dr.med" | "Lek";
+export type Title = "Dr." | "Dr.med" | "Lek.";
 
 export type Specialization = "Pediatra" | "Lekarz rodzinny";
 
