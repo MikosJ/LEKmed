@@ -7,6 +7,7 @@ import { ReservationPage } from "./pages/Reservation.tsx";
 import { Content } from "./components/styled/Content.ts";
 import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
+import { PageNotFound } from "./pages/PageNotFound.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rezerwacja" element={<ReservationPage />} />
+          <Route path={"*"} element={<PageNotFound />} />
         </Routes>
         <Footer />
       </Content>
