@@ -13,7 +13,7 @@ export type Title = "Dr." | "Dr.med" | "Lek.";
 export type Specialization = "Pediatra" | "Lekarz rodzinny";
 
 export type AvailableTimes = {
-  date: string;
+  date: Date;
   hours: string[];
 };
 

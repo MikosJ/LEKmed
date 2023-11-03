@@ -1,10 +1,28 @@
 import {Doctor} from "../types/types.ts";
 import {useNavigate} from "react-router-dom";
-import {Card} from "./styled/Card/Card.ts";
-import {BigText, Button, Description, Image, Profile, SmallText, TitleContainer} from "./styled/Card/CardStyles.ts";
+import {
+    AvailableDates,
+    BigText, BookContainer,
+    Button,
+    Card,
+    Description,
+    Image,
+    Profile,
+    SmallText,
+    TitleContainer
+} from "./styled/Card/CardStyles.ts";
 
 export const DoctorCard = (props: Doctor) => {
     const navigate = useNavigate();
+
+    const now = new Date();
+    const sevenDaysLater = new Date();
+    sevenDaysLater.setDate(now.getDate() + 7);
+
+    const free = props.availableTimes.filter((availableTime) => {
+        const date = new Date(availableTime.date);
+        return date >= now && date <= sevenDaysLater;
+    }).length > 0;
 
     return (
         <Card>
@@ -20,9 +38,14 @@ export const DoctorCard = (props: Doctor) => {
             <Description>
                 {props.description}
             </Description>
-            <Button onClick={() => navigate("/rezerwacja", {state: props})}>
-                Zarezerwuj
-            </Button>
+            <BookContainer>
+                <Button onClick={() => navigate("/rezerwacja", {state: props})}>
+                    Zarezerwuj wizyte
+                </Button>
+                <AvailableDates
+                    $isFree={free}>{free ? "Wolne terminy w tym tygodniu" : "Brak wolnych terminów w tym tygodniu"}</AvailableDates>
+            </BookContainer>
+
         </Card>
     );
 };
