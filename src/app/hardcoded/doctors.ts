@@ -8,7 +8,10 @@ export const doctors: Doctor[] = [
     title: "Dr.",
     specialization: "Lekarz rodzinny",
     availableTimes: [
-      { date: new Date(2023, 10, 6), hours: ["12:00", "12:30"] },
+      {
+        date: new Date(2023, 10, 6),
+        hours: ["12:00", "21:37", "69:69", "12:30"],
+      },
     ],
     description:
       "Dr. Mariusz Kowal to doświadczony lekarz rodzinny, dbający o zdrowie swojej społeczności. Zawsze ciepły i pełen empatii, słucha uważnie pacjentów i dostosowuje opiekę do ich potrzeb. Posiada szeroką wiedzę medyczną i promuje zdrowy styl życia.",
