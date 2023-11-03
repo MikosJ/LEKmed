@@ -7,5 +7,4 @@ export const HeaderText = styled.a`
   white-space: nowrap;
   text-decoration: none;
   font-weight: 600;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.46);
 `;

@@ -1,20 +1,15 @@
-import { MainContent } from "../components/styled/MainContent.ts";
+import { MainContent } from "../components/styled/MainContent/MainContent.ts";
 import { useLocation } from "react-router-dom";
 import { AvailableTimes, Visit } from "../types/types.ts";
 
 export const ReservationPage = () => {
   const location = useLocation();
   const visitOptions = Object.entries(Visit);
-  if (location.state === null) {
-    return (
-      <MainContent>
-        <div>Brak danych</div>
-      </MainContent>
-    );
-  }
-
-  return (
-    <>
+    return location.state === null ? (
+        <MainContent>
+            Nie możesz dokonać rezerwacji bez wcześniejszego wybrania lekarza
+        </MainContent>
+    ) : (
       <MainContent>
         <select>
           {visitOptions.map(([key, value]) => (
@@ -34,6 +29,6 @@ export const ReservationPage = () => {
         <a>{location?.state.title}</a>
         <img src={location?.state.image} alt={"brak zdjecia"} />
       </MainContent>
-    </>
+
   );
 };
