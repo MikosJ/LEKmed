@@ -1,11 +1,11 @@
-import { Title } from "./styled/Bar/Title.ts";
+import { HeaderText } from "./styled/Bar/HeaderText.ts";
 import { Bar } from "./styled/Bar/Bar.ts";
 
 export const Footer = () => {
   return (
     <Bar $header={false}>
-      <Title>Kontakt</Title>
-      <Title>Kontakt</Title>
+      <HeaderText>Kontakt</HeaderText>
+      <HeaderText>Kontakt</HeaderText>
     </Bar>
   );
 };

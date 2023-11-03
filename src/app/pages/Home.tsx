@@ -1,7 +1,8 @@
-import { Wrapper } from "../components/styled/Wrapper.ts";
 import { Test } from "../components/Test.tsx";
 import { MainContent } from "../components/styled/MainContent.ts";
 import { Doctor } from "../types/types.ts";
+import {CardContainer} from "../components/styled/Card/CardContainer.ts";
+import {Description} from "../components/styled/MainContent/Description.ts";
 
 const doctors: Doctor[] = [
   {
@@ -26,8 +27,8 @@ const doctors: Doctor[] = [
     specialization: "Pediatra",
   },
   {
-    firstname: "Kupa",
-    lastname: "Mikos",
+    firstname: "Twój",
+    lastname: "Stary",
     image: "../images/4.jpg",
     title: "Dr.",
     specialization: "Pediatra",
@@ -36,14 +37,15 @@ const doctors: Doctor[] = [
 
 export const HomePage = () => {
   return (
-    <>
       <MainContent>
-        {doctors.map((doctor) => (
-          <Wrapper>
-            <Test {...doctor} />
-          </Wrapper>
-        ))}
+        <Description>
+          Najlepsi specjaliści w jednym miejscu
+        </Description>
+        <CardContainer>
+          {doctors.map((doctor) => (
+                <Test {...doctor}  />
+          ))}
+        </CardContainer>
       </MainContent>
-    </>
   );
 };
