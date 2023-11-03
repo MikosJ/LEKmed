@@ -5,6 +5,7 @@ export type Doctor = {
   title: Title;
   specialization: Specialization;
   availableTimes: AvailableTimes[];
+  description: string;
 };
 
 export type Title = "Dr." | "Dr.med" | "Lek.";

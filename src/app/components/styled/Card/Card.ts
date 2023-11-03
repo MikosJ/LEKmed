@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border-radius: 1rem;
-  height: 30vh;
-  width: 20vw;
+  height: fit-content;
+  padding: 1rem 0;
+  width: 80vw;
   background: azure;
 `
