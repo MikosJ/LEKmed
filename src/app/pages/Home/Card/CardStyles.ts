@@ -4,14 +4,14 @@ export const CardContainer = styled.div<{ $mobile?: boolean }>`
   display: flex;
   flex-direction: ${(props) => (props.$mobile ? "row" : "column")};
   gap: 1rem;
-  max-width: 80%;
+  max-width: 85%;
   padding: 2%;
 `;
 
 export const Description = styled.p`
   font-size: 1.2rem;
   color: #000000;
-  max-width: 35%;
+  max-width: 40%;
 `;
 export const Image = styled.img`
   width: 150px;
@@ -40,23 +40,20 @@ export const TitleContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  background: linear-gradient(
-    rgba(39, 236, 197, 0.5),
-    rgba(112, 215, 195, 0.5)
-  );
-  color: white;
+  background: linear-gradient(rgba(122, 237, 255, 0.5),
+  rgba(185, 248, 255, 0.5));
+  color: #005979;
   border: none;
   padding: 1.5vw 2vh;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.4rem;
   transition: background 0.3s ease;
+  font-weight: 501;
 
   &:hover {
-    background: linear-gradient(
-      rgba(112, 215, 195, 0.5),
-      rgba(39, 236, 197, 0.5)
-    );
+    background: linear-gradient(rgba(0, 67, 218, 0.5),
+    rgba(113, 221, 255, 0.63));
   }
 `;
 export const Card = styled.div`
@@ -64,9 +61,10 @@ export const Card = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  gap: 0.5rem;
   border-radius: 1rem;
   height: fit-content;
-  padding: 1rem 1rem;
+  padding: 0.5rem 2rem;
   width: 80vw;
   background: rgb(255, 255, 255);
   border: 3px solid rgba(123, 221, 255, 0.5);
@@ -82,7 +80,7 @@ export const BookContainer = styled.div`
   padding: 0 1rem;
 `;
 export const AvailableDates = styled.p<{ $isFree: boolean }>`
-  color: ${(props) => (props.$isFree ? "green" : "red")};
+  color: ${(props) => (props.$isFree ? "#005000FF" : "#930000")};
   font-weight: bold;
   display: flex;
   max-width: 90%;

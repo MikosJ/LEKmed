@@ -1,4 +1,3 @@
-import { Doctor } from "../types/types.ts";
 import { useNavigate } from "react-router-dom";
 import {
   AvailableDates,
@@ -12,6 +11,7 @@ import {
   SmallText,
   TitleContainer,
 } from "./CardStyles.ts";
+import {Doctor} from "../../../types/types.ts";
 
 export const DoctorCard = (props: Doctor) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export const DoctorCard = (props: Doctor) => {
   sevenDaysLater.setDate(now.getDate() + 7);
 
   const free =
-    props.availableTimes.filter((availableTime) => {
+    props.availableTimes.filter((availableTime: { date: string | number | Date; }) => {
       const date = new Date(availableTime.date);
       return date >= now && date <= sevenDaysLater;
     }).length > 0;

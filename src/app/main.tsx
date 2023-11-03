@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "../../index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/Home/Home.tsx";
-import { ReservationPage } from "./pages/Reservation.tsx";
+import { ReservationPage } from "./pages/Reservation/Reservation.tsx";
 import { Header } from "./components/Header.tsx";
 import { PageNotFound } from "./pages/PageNotFound.tsx";
 
