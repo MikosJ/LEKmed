@@ -4,6 +4,7 @@ import {
   HomeDescription,
   HomeTitle,
 } from "../components/styled/MainContent/HomeTitle.ts";
+import { doctors } from "../hardcoded/doctors.ts";
 import { CardContainer } from "../components/styled/Card/CardStyles.ts";
 
 export const HomePage = () => {
