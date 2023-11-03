@@ -3,6 +3,14 @@ import {MainContent} from "../components/styled/MainContent.ts";
 import {Doctor} from "../types/types.ts";
 import {HomeDescription, HomeTitle} from "../components/styled/MainContent/HomeTitle.ts";
 import {CardContainer} from "../components/styled/Card/CardStyles.ts";
+import { DoctorCard } from "../components/DoctorCard.tsx";
+import { MainContent } from "../components/styled/MainContent.ts";
+import {
+  HomeDescription,
+  HomeTitle,
+} from "../components/styled/MainContent/HomeTitle.ts";
+import { doctors } from "../hardcoded/doctors.ts";
+import { CardContainer } from "../components/styled/Card/CardStyles.ts";
 
 const doctors: Doctor[] = [
     {
@@ -40,15 +48,19 @@ const doctors: Doctor[] = [
 ];
 
 export const HomePage = () => {
-    return (
-        <MainContent>
-            <HomeTitle>Najlepsi specjaliści w jednym miejscu</HomeTitle>
-            <HomeDescription>Centrum Medyczne LekMED to nowoczesna przychodnia wielospecjalistyczna, w której priorytetem jest rozwijanie naszych umiejętności oraz oferowanie pacjentom najnowszych i najbardziej skutecznych metod leczenia. Nasza pasja do medycyny motywuje nas do ciągłego doskonalenia i podnoszenia jakości opieki zdrowotnej. Jesteśmy dumni, że możemy zapewnić pacjentom kompleksową, innowacyjną i troskliwą opiekę, pozwalając im cieszyć się zdrowiem i jakością życia.</HomeDescription>
-            <CardContainer>
-                {doctors.map((doctor) => (
-                    <DoctorCard {...doctor} />
-                ))}
-            </CardContainer>
-        </MainContent>
-    );
+  return (
+    <MainContent>
+      <HomeTitle>Najlepsi specjaliści w jednym miejscu</HomeTitle>
+      <HomeDescription>
+        Centrum Medyczne LekMED to przychodnia wielospecjalistyczna. Stawiając
+        na rozwój , nieustannie doskonaląc swoje umiejętności zapewniamy
+        pacjentom najnowsze metody leczenia i jak najlepszą opiekę.
+      </HomeDescription>
+      <CardContainer>
+        {doctors.map((doctor) => (
+          <DoctorCard {...doctor} />
+        ))}
+      </CardContainer>
+    </MainContent>
+  );
 };
