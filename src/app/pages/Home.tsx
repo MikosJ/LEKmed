@@ -1,16 +1,9 @@
-import {DoctorCard} from "../components/DoctorCard.tsx";
-import {MainContent} from "../components/styled/MainContent.ts";
 import {Doctor} from "../types/types.ts";
+import {MainContent} from "../components/styled/MainContent.ts";
 import {HomeDescription, HomeTitle} from "../components/styled/MainContent/HomeTitle.ts";
 import {CardContainer} from "../components/styled/Card/CardStyles.ts";
-import { DoctorCard } from "../components/DoctorCard.tsx";
-import { MainContent } from "../components/styled/MainContent.ts";
-import {
-  HomeDescription,
-  HomeTitle,
-} from "../components/styled/MainContent/HomeTitle.ts";
-import { doctors } from "../hardcoded/doctors.ts";
-import { CardContainer } from "../components/styled/Card/CardStyles.ts";
+import {DoctorCard} from "../components/DoctorCard.tsx";
+
 
 const doctors: Doctor[] = [
     {
