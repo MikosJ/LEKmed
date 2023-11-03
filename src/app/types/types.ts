@@ -17,12 +17,13 @@ export type AvailableTimes = {
   hours: string[];
 };
 
-export type Visit =
-  | "Wizyta kontrolna"
-  | "Konsultacja"
-  | "Choroba"
-  | "Wypisanie recepty"
-  | "Szczepienie";
+export enum Visit {
+  control = "Wizyta kontrolna",
+  consultation = "Konsultacja",
+  illness = "Choroba",
+  prescription = "Wypisanie recepty",
+  vaccination = "Szczepienie",
+}
 
 export type Reservation = {
   doctor: Doctor;
