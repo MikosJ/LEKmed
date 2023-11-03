@@ -12,7 +12,7 @@ const doctors: Doctor[] = [
     title: "Dr.",
     specialization: "Lekarz rodzinny",
     availableTimes: [{ date: "03.12.2023", hours: ["12:00", "12:30"] }],
-    description: "Dr. Paweł Kowal to doświadczony lekarz rodzinny, który od wielu lat dba o zdrowie mieszkańców swojej społeczności. Zawsze ciepła i pełna empatii, jest znana z tego, że słucha uważnie swoich pacjentów i dostosowuje opiekę do ich indywidualnych potrzeb. Jej szeroka wiedza medyczna obejmuje opiekę nad pacjentami w każdym wieku, a jej zrozumienie znaczenia zdrowego stylu życia sprawia, że pomaga swoim pacjentom osiągnąć i utrzymać optymalne zdrowie."
+    description: "Dr. Mariusz Kowal to doświadczony lekarz rodzinny, który od wielu lat dba o zdrowie mieszkańców swojej społeczności. Zawsze ciepła i pełna empatii, jest znana z tego, że słucha uważnie swoich pacjentów i dostosowuje opiekę do ich indywidualnych potrzeb. Jej szeroka wiedza medyczna obejmuje opiekę nad pacjentami w każdym wieku, a jej zrozumienie znaczenia zdrowego stylu życia sprawia, że pomaga swoim pacjentom osiągnąć i utrzymać optymalne zdrowie."
   },
   {
     firstname: "Anna",
@@ -30,16 +30,16 @@ const doctors: Doctor[] = [
     title: "Lek.",
     specialization: "Lekarz rodzinny",
     availableTimes: [{ date: "03.12.2023", hours: ["12:00", "12:30"] }],
-    description:"Dr. Paweł Wójcik to lekarz rodzinny, który kładzie duży nacisk na promocję zdrowego stylu życia wśród swoich pacjentów. Jego podejście opiera się na zapobieganiu chorobom i utrzymaniu zdrowia, a nie tylko leczeniu schorzeń. Dr. Wójcik jest aktywny społecznie i często organizuje warsztaty i prelekcje na temat zdrowego odżywiania i aktywności fizycznej."
+    description:"Dr. Jan spych to lekarz rodzinny, który kładzie duży nacisk na promocję zdrowego stylu życia wśród swoich pacjentów. Jego podejście opiera się na zapobieganiu chorobom i utrzymaniu zdrowia, a nie tylko leczeniu schorzeń. Dr. Spych jest aktywny społecznie i często organizuje warsztaty i prelekcje na temat zdrowego odżywiania i aktywności fizycznej."
   },
   {
-    firstname: "Twój",
-    lastname: "Stary",
+    firstname: "Karolina",
+    lastname: "Wach",
     image: "../images/4.jpg",
     title: "Dr.",
     specialization: "Pediatra",
     availableTimes: [{ date: "03.12.2023", hours: ["12:00", "12:30"] }],
-  description: "Dr. Marta Szymańska to doświadczona pediatra, która zdobyła zaufanie rodziców dzięki swojej wnikliwości i trosce o dobro dzieci. Jej gabinet jest przyjaznym miejscem, gdzie dzieci czują się komfortowo i bezpiecznie. Dr. Szymańska jest również znana z tego, że jest zaangażowana w działania na rzecz profilaktyki zdrowotnej wśród najmłodszych pacjentów i ich rodzin. Jej wiedza i doświadczenie pozwalają jej zapewnić kompleksową opiekę pediatryczną."
+  description: "Dr. Karolina Wach to doświadczona pediatra, która zdobyła zaufanie rodziców dzięki swojej wnikliwości i trosce o dobro dzieci. Jej gabinet jest przyjaznym miejscem, gdzie dzieci czują się komfortowo i bezpiecznie. Dr. Szymańska jest również znana z tego, że jest zaangażowana w działania na rzecz profilaktyki zdrowotnej wśród najmłodszych pacjentów i ich rodzin. Jej wiedza i doświadczenie pozwalają jej zapewnić kompleksową opiekę pediatryczną."
   },
 ];
 
