@@ -9,8 +9,8 @@ export const Header = () => {
       <Logo src={"../svg/logo.svg"}></Logo>
       <BarSection>
         <HeaderText href={"/"}>Strona główna</HeaderText>
-        <HeaderText>O nas</HeaderText>
-        <HeaderText>Kontakt</HeaderText>
+        <HeaderText href={"//x.com"}>Twitter</HeaderText>
+        <HeaderText href={"https://www.nfz.gov.pl/"}>NFZ</HeaderText>
       </BarSection>
     </Bar>
   );

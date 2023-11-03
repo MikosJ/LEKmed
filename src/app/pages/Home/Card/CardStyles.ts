@@ -11,8 +11,7 @@ export const CardContainer = styled.div<{ $mobile?: boolean }>`
 export const Description = styled.p`
   font-size: 1.2rem;
   color: #000000;
-  max-width: 50%;
-  padding: 2rem 0;
+  max-width: 35%;
 `;
 export const Image = styled.img`
   width: 150px;
@@ -80,7 +79,7 @@ export const BookContainer = styled.div`
   gap: 3rem;
   align-items: center;
   max-width: 15%;
-  padding: 1.5rem;
+  padding: 0 1rem;
 `;
 export const AvailableDates = styled.p<{ $isFree: boolean }>`
   color: ${(props) => (props.$isFree ? "green" : "red")};

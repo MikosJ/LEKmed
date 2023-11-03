@@ -11,7 +11,7 @@ import {
   Profile,
   SmallText,
   TitleContainer,
-} from "./styled/Card/CardStyles.ts";
+} from "./CardStyles.ts";
 
 export const DoctorCard = (props: Doctor) => {
   const navigate = useNavigate();
