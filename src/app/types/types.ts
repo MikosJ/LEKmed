@@ -30,7 +30,13 @@ export type Reservation = {
   patient: Patient;
   visit: Visit;
   status: Status;
+  price: Price;
   date: Date;
+};
+
+export type Price = {
+  value: number;
+  currency: "PLN" | "EUR";
 };
 
 export type Status = "Zarezerwowana" | "Anulowana" | "Zakończona";
