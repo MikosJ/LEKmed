@@ -5,8 +5,10 @@ export const MainContent = styled.div<{ $direction?: "row" | "column" }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
   gap: 1rem;
-  background: #27ecc5;
-  background: linear-gradient(45deg, rgba(39, 236, 197, 0.5) 0%, rgba(13, 166, 132, 0.5) 30%, rgba(13, 166, 132, 0.5) 55%, rgba(39, 236, 197, 0.5) 100%);
+  min-height: 90vh;
+  background: linear-gradient(
+    rgba(39, 236, 197, 0.5),
+    rgba(112, 215, 195, 0.5)
+  );
 `;

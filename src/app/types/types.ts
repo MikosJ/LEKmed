@@ -4,14 +4,17 @@ export type Doctor = {
   image?: string;
   title: Title;
   specialization: Specialization;
-  schedule?: Schedule;
+  availableTimes: AvailableTimes[];
 };
 
 export type Title = "Dr." | "Dr.med" | "Lek.";
 
 export type Specialization = "Pediatra" | "Lekarz rodzinny";
 
-export type Schedule = {};
+export type AvailableTimes = {
+  date: string;
+  hours: string[];
+};
 
 export type Visit =
   | "Wizyta kontrolna"

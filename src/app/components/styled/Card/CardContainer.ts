@@ -5,4 +5,4 @@ export const CardContainer = styled.div`
   flex-direction: row;
   gap: 1rem;
   max-width: 80vw;
-`
+`;

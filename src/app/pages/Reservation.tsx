@@ -10,8 +10,25 @@ export const ReservationPage = () => {
       </MainContent>
     );
   }
+  // export type Doctor = {
+  //   firstname: string;
+  //   lastname: string;
+  //   image?: string;
+  //   title: Title;
+  //   specialization: Specialization;
+  //   availableTimes: AvailableTimes[];
+  // };
+  //   export type AvailableTimes = {
+  //       date: string;
+  //       hours: string[];
+  //   };
   return (
     <MainContent>
+      <ul>
+        {location.state.availableTimes.map((it: { hours: string[] }) =>
+          it.hours.map((hour) => <li>{hour}</li>),
+        )}
+      </ul>
       <a>{location?.state.firstname}</a>
       <a>{location?.state.lastname}</a>
       <a>{location?.state.title}</a>
