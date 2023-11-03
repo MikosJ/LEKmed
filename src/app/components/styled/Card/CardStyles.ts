@@ -54,7 +54,6 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 1.4rem;
   transition: background 0.3s ease;
-  font-size: 1rem;
 
   &:hover {
     background: linear-gradient(

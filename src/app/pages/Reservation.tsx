@@ -24,7 +24,7 @@ export const ReservationPage = () => {
         {location.state.availableTimes.map((it: AvailableTimes) =>
           it.hours.map((hour) => (
             <>
-              <a>{it.date}</a>
+              <a>{it.date.toLocaleString().substring(0,it.date.toLocaleString().indexOf(","))}</a>
               <button>{hour}</button>
             </>
           )),
