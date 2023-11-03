@@ -8,5 +8,5 @@ export const MainContent = styled.div<{ $direction?: "row" | "column" }>`
   min-height: 85vh;
   gap: 1rem;
   background: #27ecc5;
-  background: linear-gradient(45deg, #27ecc5 0%,  #0da684 30%, #0da684 55%, #27ecc5 100%);
+  background: linear-gradient(45deg, rgba(39, 236, 197, 0.5) 0%, rgba(13, 166, 132, 0.5) 30%, rgba(13, 166, 132, 0.5) 55%, rgba(39, 236, 197, 0.5) 100%);
 `;
