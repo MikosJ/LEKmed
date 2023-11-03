@@ -1,5 +1,6 @@
 import { MainContent } from "../components/styled/MainContent.ts";
 import { useLocation } from "react-router-dom";
+import { AvailableTimes } from "../types/types.ts";
 
 export const ReservationPage = () => {
   const location = useLocation();
@@ -10,25 +11,11 @@ export const ReservationPage = () => {
       </MainContent>
     );
   }
-  // export type Doctor = {
-  //   firstname: string;
-  //   lastname: string;
-  //   image?: string;
-  //   title: Title;
-  //   specialization: Specialization;
-  //   availableTimes: AvailableTimes[];
-  // };
-  //   export type AvailableTimes = {
-  //       date: string;
-  //       hours: string[];
-  //   };
   return (
     <MainContent>
-      <ul>
-        {location.state.availableTimes.map((it: { hours: string[] }) =>
-          it.hours.map((hour) => <li>{hour}</li>),
-        )}
-      </ul>
+      {location.state.availableTimes.map((it: AvailableTimes) =>
+        it.hours.map((hour) => <button>{hour}</button>),
+      )}
       <a>{location?.state.firstname}</a>
       <a>{location?.state.lastname}</a>
       <a>{location?.state.title}</a>

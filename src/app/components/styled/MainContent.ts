@@ -7,8 +7,5 @@ export const MainContent = styled.div<{ $direction?: "row" | "column" }>`
   align-items: center;
   gap: 1rem;
   min-height: 90vh;
-  background: linear-gradient(
-    rgba(39, 236, 197, 0.5),
-    rgba(112, 215, 195, 0.5)
-  );
+  background: linear-gradient(rgba(39, 236, 197, 0.5), rgb(200, 243, 240));
 `;
