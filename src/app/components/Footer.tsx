@@ -1,5 +1,5 @@
-import { HeaderText } from "./styled/Bar/HeaderText.ts";
-import { Bar } from "./styled/Bar/Bar.ts";
+import { HeaderText } from "../styledComponents/Bar/HeaderText.ts";
+import { Bar } from "../styledComponents/Bar/Bar.ts";
 
 export const Footer = () => {
   return (

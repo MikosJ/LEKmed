@@ -1,9 +1,6 @@
 import { DoctorCard } from "./Card/DoctorCard.tsx";
-import { MainContent } from "../../components/styled/MainContent/MainContent.ts";
-import {
-  HomeDescription,
-  HomeTitle,
-} from "./HomeTitle.ts";
+import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
+import { HomeDescription, HomeTitle } from "./HomeTitle.ts";
 import { doctors } from "../../hardcoded/doctors.ts";
 import { CardContainer } from "./Card/CardStyles.ts";
 

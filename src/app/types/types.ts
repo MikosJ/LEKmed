@@ -31,7 +31,7 @@ export type Reservation = {
   visit: Visit;
   status: Status;
   price: Price;
-  date: Date;
+  date: [Date, string];
 };
 
 export type Price = {
@@ -45,10 +45,10 @@ export type Patient = {
   firstname: string;
   lastname: string;
   pesel: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
   dateOfBirth: Date;
-  address: Address;
+  address?: Address;
 };
 
 export type Address = {

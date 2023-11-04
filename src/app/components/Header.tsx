@@ -1,7 +1,7 @@
-import { HeaderText } from "./styled/Bar/HeaderText.ts";
-import { Bar } from "./styled/Bar/Bar.ts";
-import { BarSection } from "./styled/Bar/BarSection.ts";
-import { Logo } from "./styled/Bar/Logo.ts";
+import { HeaderText } from "../styledComponents/Bar/HeaderText.ts";
+import { Bar } from "../styledComponents/Bar/Bar.ts";
+import { BarSection } from "../styledComponents/Bar/BarSection.ts";
+import { Logo } from "../styledComponents/Bar/Logo.ts";
 
 export const Header = () => {
   return (

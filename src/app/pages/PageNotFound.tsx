@@ -1,4 +1,4 @@
-import { MainContent } from "../components/styled/MainContent/MainContent.ts";
+import { MainContent } from "../styledComponents/MainContent/MainContent.ts";
 
 export const PageNotFound = () => {
   return (
