@@ -1,7 +1,7 @@
-export const prices = {
-    control: 150,
-    consultation: 170,
-    illness: 250,
-    prescription: 200,
-    vaccination: 300
+export const prices: Record<string, number> = {
+    control: 100,
+    consultation: 150,
+    illness: 200,
+    prescription: 80,
+    vaccination: 120,
 };
