@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Location, useLocation, useNavigate } from "react-router-dom";
-import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
+import {useState} from "react";
+import {Location, useLocation, useNavigate} from "react-router-dom";
+import {MainContent} from "../../styledComponents/MainContent/MainContent.ts";
 import {
   Container,
   DateContainer,
@@ -11,16 +11,10 @@ import {
   Title,
   VisitPickContainer,
 } from "./ReservationStyles.ts";
-import Select, { SingleValue } from "react-select";
-import {
-  AvailableTimes,
-  Doctor,
-  Patient,
-  Reservation,
-  Visit,
-} from "../../types/types.ts";
-import { prices } from "../../hardcoded/prices.ts";
-import { Button } from "../Home/Card/CardStyles.ts";
+import Select, {SingleValue} from "react-select";
+import {AvailableTimes, Doctor, Patient, Reservation, Visit,} from "../../types/types.ts";
+import {prices} from "../../hardcoded/prices.ts";
+import {Button} from "../Home/Card/CardStyles.ts";
 
 export const ReservationPage = () => {
   const navigate = useNavigate();
@@ -35,11 +29,11 @@ export const ReservationPage = () => {
   //   location.state.availableTimes[0],
   // );
   const visitOptions = [
-    { value: "control", label: "Wizyta kontrolna" },
-    { value: "consultation", label: "Konsultacja" },
-    { value: "illness", label: "Choroba" },
-    { value: "prescription", label: "Wypisanie recepty" },
-    { value: "vaccination", label: "Szczepienie" },
+    { value: Visit.control, label: "Wizyta kontrolna" },
+    { value: Visit.consultation, label: "Konsultacja" },
+    { value: Visit.illness, label: "Choroba" },
+    { value: Visit.prescription, label: "Wypisanie recepty" },
+    { value: Visit.vaccination, label: "Szczepienie" },
   ];
   const [selectedOption, setSelectedOption] = useState<{
     value: string;
@@ -67,7 +61,6 @@ export const ReservationPage = () => {
       doctor: location.state,
       patient: patient,
       visit: Visit.control,
-      date: [selectedDate.date, selectedDate.hours[0]],
       price: { value: 100, currency: "PLN" },
       status: "Zarezerwowana",
     };

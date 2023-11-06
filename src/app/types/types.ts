@@ -31,7 +31,6 @@ export type Reservation = {
   visit: Visit;
   status: Status;
   price: Price;
-  date: [Date, string];
 };
 
 export type Price = {
