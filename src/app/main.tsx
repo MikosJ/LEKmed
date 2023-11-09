@@ -6,7 +6,7 @@ import { HomePage } from "./pages/Home/Home.tsx";
 import { ReservationPage } from "./pages/Reservation/Reservation.tsx";
 import { Header } from "./components/Header.tsx";
 import { PageNotFound } from "./pages/PageNotFound.tsx";
-import { ReservationSummary } from "./pages/Reservation/Summary/ReservationSummary.tsx";
+import { ReservationSummary } from "./pages/Summary/ReservationSummary.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -9,8 +9,9 @@ export const ReservationContainer = styled.div`
   border-radius: 10px;
   border: solid rgba(255, 255, 255, 0.49) 5px;
   width: 80%;
-  max-height: fit-content;
+  max-height: 80vh;
   padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.29) 0 0 3rem;
 `
 
 export const Container = styled.div`
@@ -37,6 +38,7 @@ export const DatesContainer = styled.div`
   display: flow;
   overflow: auto;
   align-items: center;
+  max-height: 30vh;
 `
 export const DateContainer = styled.div`
   display: flow;

@@ -1,6 +1,6 @@
-import { MainContent } from "../../../styledComponents/MainContent/MainContent.ts";
+import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import { Location, useLocation } from "react-router-dom";
-import { Reservation } from "../../../types/types.ts";
+import { Reservation } from "../../types/types.ts";
 
 export const ReservationSummary = () => {
   const location: Location<Reservation> = useLocation();
