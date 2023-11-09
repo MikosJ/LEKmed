@@ -30,6 +30,10 @@ export enum Visit {
   vaccination = "Szczepienie",
 }
 
+export type VisitLabel = {
+  value: Visit.control;
+};
+
 export type Reservation = {
   doctor: Doctor;
   patient: Patient;

@@ -43,11 +43,11 @@ export const ReservationPage = () => {
     { value: Visit.vaccination, label: "Szczepienie" },
   ];
   const [selectedOption, setSelectedOption] = useState<{
-    value: string;
+    value: Visit;
     label: string;
   }>(visitOptions[0]); // Initialize with the first option
   const handleSelectChange = (
-    newValue: SingleValue<{ value: string; label: string }>,
+    newValue: SingleValue<{ value: Visit; label: string }>,
   ) => {
     if (newValue) {
       setSelectedOption(newValue);
@@ -67,7 +67,7 @@ export const ReservationPage = () => {
     const reservation: Reservation = {
       doctor: location.state,
       patient: patient,
-      visit: Visit.control,
+      visit: selectedOption.value,
       price: { value: 100, currency: "PLN" },
       status: "Zarezerwowana",
     };
