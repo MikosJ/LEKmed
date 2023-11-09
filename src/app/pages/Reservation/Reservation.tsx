@@ -1,6 +1,6 @@
-import {useState} from "react";
-import {Location, useLocation, useNavigate} from "react-router-dom";
-import {MainContent} from "../../styledComponents/MainContent/MainContent.ts";
+import { useState } from "react";
+import { Location, useLocation, useNavigate } from "react-router-dom";
+import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import {
   Container,
   DateContainer,
@@ -11,10 +11,16 @@ import {
   Title,
   VisitPickContainer,
 } from "./ReservationStyles.ts";
-import Select, {SingleValue} from "react-select";
-import {AvailableTimes, Doctor, Patient, Reservation, Visit,} from "../../types/types.ts";
-import {prices} from "../../hardcoded/prices.ts";
-import {Button} from "../Home/Card/CardStyles.ts";
+import Select, { SingleValue } from "react-select";
+import {
+  AvailableTimes,
+  Doctor,
+  Patient,
+  Reservation,
+  Visit,
+} from "../../types/types.ts";
+import { prices } from "../../hardcoded/prices.ts";
+import { Button } from "../Home/Card/CardStyles.ts";
 
 export const ReservationPage = () => {
   const navigate = useNavigate();
