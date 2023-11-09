@@ -17,6 +17,11 @@ export type AvailableTimes = {
   hours: string[];
 };
 
+export type PickedTime = {
+  date: Date;
+  hour: string;
+};
+
 export enum Visit {
   control = "Wizyta kontrolna",
   consultation = "Konsultacja",

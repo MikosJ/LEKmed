@@ -16,6 +16,7 @@ import {
   AvailableTimes,
   Doctor,
   Patient,
+  PickedTime,
   Reservation,
   Visit,
 } from "../../types/types.ts";
@@ -52,13 +53,13 @@ export const ReservationPage = () => {
       setSelectedOption(newValue);
     }
   };
-  const [pickedButton, setPickedButton] = useState<string>("");
+  const [pickedTime, setPickedTime] = useState<PickedTime>();
 
   const handleButtonClick = (date: Date, hour: string) => {
-    if (pickedButton === `${date}-${hour}`) {
-      setPickedButton("");
+    if (pickedTime?.hour === hour && pickedTime.date === date) {
+      setPickedTime({ hour, date });
     } else {
-      setPickedButton(`${date}-${hour}`);
+      setPickedTime({ hour, date });
     }
   };
 
@@ -101,7 +102,10 @@ export const ReservationPage = () => {
                   <DateContainer>
                     {at.hours.map((hour) => (
                       <HourButton
-                        $picked={pickedButton === `${at.date}-${hour}`}
+                        $picked={
+                          pickedTime?.date === at.date &&
+                          pickedTime.hour === hour
+                        }
                         key={`${at.date}-${hour}`}
                         onClick={() => handleButtonClick(at.date, hour)}
                         type={"button"}
@@ -116,7 +120,7 @@ export const ReservationPage = () => {
           </Container>
         </form>
         <Title>Koszt: {prices[selectedOption.value]} PLN</Title>
-        {pickedButton && (
+        {pickedTime && (
           <Button onClick={handleReservationButton}>Zarezerwuj</Button>
         )}
       </ReservationContainer>
