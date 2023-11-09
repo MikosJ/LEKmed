@@ -38,7 +38,7 @@ export const DatesContainer = styled.div`
   display: flow;
   overflow: auto;
   align-items: center;
-  max-height: 30vh;
+  max-height: 50vh;
 `
 export const DateContainer = styled.div`
   display: flow;
