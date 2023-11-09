@@ -27,14 +27,11 @@ export const ReservationPage = () => {
   const navigate = useNavigate();
   const location: Location<Doctor> = useLocation();
   const patient: Patient = {
-    firstname: "Jan",
-    lastname: "Spych",
+    firstname: "Karol",
+    lastname: "Wojcieszak",
     dateOfBirth: new Date(1999, 12, 23),
-    pesel: "999111111",
+    pesel: "210037009",
   };
-  // const [selectedDate, setSelectedDate] = useState(
-  //   location.state.availableTimes[0],
-  // );
   const visitOptions = [
     { value: Visit.control, label: "Wizyta kontrolna" },
     { value: Visit.consultation, label: "Konsultacja" },
@@ -45,7 +42,7 @@ export const ReservationPage = () => {
   const [selectedOption, setSelectedOption] = useState<{
     value: Visit;
     label: string;
-  }>(visitOptions[0]); // Initialize with the first option
+  }>(visitOptions[0]);
   const handleSelectChange = (
     newValue: SingleValue<{ value: Visit; label: string }>,
   ) => {
