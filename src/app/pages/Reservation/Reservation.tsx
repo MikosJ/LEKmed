@@ -90,30 +90,32 @@ export const ReservationPage = () => {
               />
             </VisitPickContainer>
             <DatesContainer>
-              {location.state.availableTimes.map((at: AvailableTimes) => (
-                <DateTimeContainer>
-                  <Title>
-                    {at.date
-                      .toLocaleString()
-                      .substring(0, at.date.toLocaleString().indexOf(","))}
-                  </Title>
-                  <DateContainer>
-                    {at.hours.map((hour) => (
-                      <HourButton
-                        $picked={
-                          pickedTime?.date === at.date &&
-                          pickedTime.hour === hour
-                        }
-                        key={`${at.date}-${hour}`}
-                        onClick={() => handleButtonClick(at.date, hour)}
-                        type={"button"}
-                      >
-                        {hour}
-                      </HourButton>
-                    ))}
-                  </DateContainer>
-                </DateTimeContainer>
-              ))}
+              {location.state.availableTimes.map(
+                (at: AvailableTimes, index) => (
+                  <DateTimeContainer key={index}>
+                    <Title>
+                      {at.date
+                        .toLocaleString()
+                        .substring(0, at.date.toLocaleString().indexOf(","))}
+                    </Title>
+                    <DateContainer>
+                      {at.hours.map((hour) => (
+                        <HourButton
+                          $picked={
+                            pickedTime?.date === at.date &&
+                            pickedTime.hour === hour
+                          }
+                          key={`${at.date}-${hour}`}
+                          onClick={() => handleButtonClick(at.date, hour)}
+                          type={"button"}
+                        >
+                          {hour}
+                        </HourButton>
+                      ))}
+                    </DateContainer>
+                  </DateTimeContainer>
+                ),
+              )}
             </DatesContainer>
           </Container>
         </form>

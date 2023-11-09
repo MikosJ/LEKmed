@@ -14,8 +14,8 @@ export const HomePage = () => {
         pacjentom najnowsze metody leczenia i jak najlepszą opiekę.
       </HomeDescription>
       <CardContainer>
-        {doctors.map((doctor) => (
-          <DoctorCard {...doctor} />
+        {doctors.map((doctor, index) => (
+          <DoctorCard {...doctor} key={index} />
         ))}
       </CardContainer>
     </MainContent>
