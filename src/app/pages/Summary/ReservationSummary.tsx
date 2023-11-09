@@ -1,6 +1,7 @@
 import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import { Location, useLocation } from "react-router-dom";
 import { Reservation } from "../../types/types.ts";
+import { Button } from "../Home/Card/CardStyles.ts";
 
 export const ReservationSummary = () => {
   const location: Location<Reservation> = useLocation();
@@ -17,8 +18,11 @@ export const ReservationSummary = () => {
       <div>{location.state.visit}</div>
       <div>{location.state.pickedTime.date.toLocaleDateString()}</div>
       <div>{location.state.pickedTime.hour}</div>
+      <div>{location.state.price.value}</div>
+      <div>{location.state.price.currency}</div>
       <div>status rezerwacji:</div>
       <div>{location.state.status}</div>
+      <Button>Anuluj</Button>
     </MainContent>
   );
 };
