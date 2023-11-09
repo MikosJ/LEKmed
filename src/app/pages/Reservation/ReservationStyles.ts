@@ -47,9 +47,8 @@ export const DateContainer = styled.div`
 `;
 
 export const HourButton = styled.button<{ $picked: boolean }>`
-  background: ${(props) => (props.$picked ? "rgba(195,255,191,0.6)" : "azure")};
-  color: ${(props) => (props.$picked ? "black" : "black")};
-  padding: 10px;
+  background: ${(props) => (props.$picked ? "rgba(33,198,255,0.6)" : "azure")};
+  padding: 15px;
   margin: 3px;
   cursor: pointer;
   outline: none;
@@ -57,7 +56,9 @@ export const HourButton = styled.button<{ $picked: boolean }>`
     background 0.3s,
     color 0.3s;
   border-radius: 10px;
-  border: rgba(13, 166, 132, 0.5) solid 3px;
+  border: rgba(66, 189, 162, 0.5) solid 3px;
+  font-weight: bold;
+  color: rgba(0, 143, 108, 0.5);
 `;
 
 export const Title = styled.h3`
