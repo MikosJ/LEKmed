@@ -11,9 +11,12 @@ export const ReservationSummary = () => {
     <MainContent>
       <div>{location.state.patient.firstname}</div>
       <div>{location.state.patient.lastname}</div>
-      <div>umowiony do</div>
+      <div>umowiony do:</div>
       <div>{location.state.doctor.firstname}</div>
       <div>{location.state.doctor.lastname}</div>
+      <div>{location.state.visit}</div>
+      <div>{location.state.pickedTime.date.toLocaleDateString()}</div>
+      <div>{location.state.pickedTime.hour}</div>
       <div>status rezerwacji:</div>
       <div>{location.state.status}</div>
     </MainContent>

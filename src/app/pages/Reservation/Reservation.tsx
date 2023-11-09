@@ -26,12 +26,6 @@ import { Button } from "../Home/Card/CardStyles.ts";
 export const ReservationPage = () => {
   const navigate = useNavigate();
   const location: Location<Doctor> = useLocation();
-  const patient: Patient = {
-    firstname: "Karol",
-    lastname: "Wojcieszak",
-    dateOfBirth: new Date(1999, 12, 23),
-    pesel: "210037009",
-  };
   const visitOptions = [
     { value: Visit.control, label: "Wizyta kontrolna" },
     { value: Visit.consultation, label: "Konsultacja" },
@@ -61,10 +55,17 @@ export const ReservationPage = () => {
   };
 
   const handleReservationButton = () => {
+    const patient: Patient = {
+      firstname: "Jan",
+      lastname: "Spych",
+      dateOfBirth: new Date(1999, 12, 23),
+      pesel: "999111111",
+    };
     const reservation: Reservation = {
       doctor: location.state,
       patient: patient,
       visit: selectedOption.value,
+      pickedTime: pickedTime ?? { date: new Date(2023, 12, 12), hour: "" },
       price: { value: 100, currency: "PLN" },
       status: "Zarezerwowana",
     };
