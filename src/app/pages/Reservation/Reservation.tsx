@@ -15,24 +15,19 @@ import Select, { SingleValue } from "react-select";
 import {
   AvailableTimes,
   Doctor,
-  Patient,
   PickedTime,
   Reservation,
   Visit,
 } from "../../types/types.ts";
 import { prices } from "../../hardcoded/prices.ts";
 import { Button } from "../Home/Card/CardStyles.ts";
+import { visitOptions } from "../../hardcoded/visitOptions";
+import { patient } from "../../hardcoded/patient";
 
 export const ReservationPage = () => {
   const navigate = useNavigate();
   const location: Location<Doctor> = useLocation();
-  const visitOptions = [
-    { value: Visit.control, label: "Wizyta kontrolna" },
-    { value: Visit.consultation, label: "Konsultacja" },
-    { value: Visit.illness, label: "Choroba" },
-    { value: Visit.prescription, label: "Wypisanie recepty" },
-    { value: Visit.vaccination, label: "Szczepienie" },
-  ];
+
   const [selectedOption, setSelectedOption] = useState<{
     value: Visit;
     label: string;
@@ -55,12 +50,6 @@ export const ReservationPage = () => {
   };
 
   const handleReservationButton = () => {
-    const patient: Patient = {
-      firstname: "Jan",
-      lastname: "Spych",
-      dateOfBirth: new Date(1999, 12, 23),
-      pesel: "999111111",
-    };
     const reservation: Reservation = {
       doctor: location.state,
       patient: patient,
