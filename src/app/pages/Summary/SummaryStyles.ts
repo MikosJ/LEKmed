@@ -1,38 +1,51 @@
 import styled from "styled-components";
 
-export const Pierwszy = styled.div``;
-export const Drugi = styled.div``;
-
-export const Trzeci = styled.div`
+export const Block = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  justify-content: space-between;
 `;
+export const Key = styled.a`
+  text-align: left;
+`;
+export const Value = styled.a`
+  font-weight: bold;
+  text-align: right;
+`;
+export const Summary = styled.div`
+  display: grid;
+  min-width: 70%;
+  column-gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
 
-export const PatientContainer = styled.div``;
-export const VisitContainer = styled.div``;
-export const DoctorContainer = styled.div``;
-
-export const PriceContainer = styled.div``;
-
-export const StateContainer = styled.div``;
-
-export const DateContainer = styled.div``;
-
+  @media (max-width: 1000px) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    font-size: 40px;
+  }
+`;
+export const Title = styled.h2`
+  text-align: center;
+  padding-bottom: 1rem;
+`;
 export const ReservationContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  min-width: 50%;
-  width: fit-content;
+  height: 50%;
   background: #e9fffd;
   border-radius: 10px;
   border: solid rgba(0, 0, 0, 0.49) 5px;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.29) 0 0 3rem;
   font-size: 1rem;
+
+  @media (max-width: 1000px) {
+    min-height: 30vh;
+    justify-content: center;
+    font-size: 30px;
+  }
 `;
 
 export const Button = styled.button`

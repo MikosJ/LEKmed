@@ -2,17 +2,13 @@ import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import { Location, useLocation } from "react-router-dom";
 import { Reservation } from "../../types/types.ts";
 import {
+  Block,
   Button,
-  DateContainer,
-  DoctorContainer,
-  Drugi,
-  PatientContainer,
-  Pierwszy,
-  PriceContainer,
+  Key,
   ReservationContainer,
-  StateContainer,
-  Trzeci,
-  VisitContainer,
+  Summary,
+  Title,
+  Value,
 } from "./SummaryStyles.ts";
 import { useState } from "react";
 
@@ -25,57 +21,64 @@ export const ReservationSummary = () => {
 
   const [visitStatus, setVisitStatus] = useState(status);
 
+  const [title, setTtile] = useState("Twoja wizyta została zarezerwowana!");
+
+  const [button, setButton] = useState("Anuluj Wizyte");
+
   function handleClick() {
-    setVisitStatus("Anulowana");
+    if (button === "Anuluj Wizyte") {
+      setVisitStatus("Anulowana");
+      setTtile("Twoja wizyta została anulowana");
+      setButton("Zarezerwuj");
+      return;
+    }
+    setVisitStatus("Zarezerwowana");
+    setTtile("Twoja wizyta została zarezerwowana!");
+    setButton("Anuluj Wizyte");
   }
 
   return (
     <MainContent>
       <ReservationContainer>
-        <h2>Twoja wizyta została zarezerwowana!</h2>
-        <Trzeci>
-          <Pierwszy>
-            <PatientContainer>
-              <p>Pacjent:</p>
-              <p>
-                {location.state.patient.firstname}{" "}
-                {location.state.patient.lastname}
-              </p>
-            </PatientContainer>
-            <DoctorContainer>
-              <p>Doktor:</p>
-              <p>
-                {location.state.doctor.firstname}{" "}
-                {location.state.doctor.lastname}
-              </p>
-            </DoctorContainer>
-          </Pierwszy>
-          <Drugi>
-            <VisitContainer>
-              <p>Rodzaj wizyty:</p>
-              <p>{location.state.visit}</p>
-            </VisitContainer>
-            <DateContainer>
-              <p>Data:</p>
-              <p>
-                {location.state.pickedTime.date.toLocaleDateString()}{" "}
-                {location.state.pickedTime.hour}
-              </p>
-            </DateContainer>
-            <PriceContainer>
-              <p>Cena:</p>
-              <p>
-                {location.state.price.value} {location.state.price.currency}
-              </p>
-            </PriceContainer>
-            <StateContainer>
-              <p>Status:</p>
-              <p>{visitStatus}</p>
-            </StateContainer>
-          </Drugi>
-        </Trzeci>
+        <Title>{title}</Title>
+        <Summary>
+          <Block>
+            <Key>Pacjent: </Key>
+            <Value>
+              {location.state.patient.firstname}{" "}
+              {location.state.patient.lastname}
+            </Value>
+          </Block>
+          <Block>
+            <Key>Doktor: </Key>
+            <Value>
+              {location.state.doctor.firstname} {location.state.doctor.lastname}
+            </Value>
+          </Block>
+          <Block>
+            <Key>Rodzaj wizyty: </Key>
+            <Value>{location.state.visit}</Value>
+          </Block>
+          <Block>
+            <Key>Data: </Key>
+            <Value>
+              {location.state.pickedTime.date.toLocaleDateString()}{" "}
+              {location.state.pickedTime.hour}
+            </Value>
+          </Block>
+          <Block>
+            <Key>Cena: </Key>
+            <Value>
+              {location.state.price.value} {location.state.price.currency}
+            </Value>
+          </Block>
+          <Block>
+            <Key>Status: </Key>
+            <Value>{visitStatus}</Value>
+          </Block>
+        </Summary>
       </ReservationContainer>
-      <Button onClick={handleClick}>Anuluj Wizyte</Button>
+      <Button onClick={handleClick}>{button}</Button>
     </MainContent>
   );
 };
