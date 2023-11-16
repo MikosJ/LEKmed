@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 import { Location, useLocation, useNavigate } from "react-router-dom";
 import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import {
@@ -7,6 +8,15 @@ import {
   DatesContainer,
   DateTimeContainer,
   HourButton,
+  MobileButton,
+  MobileContainer,
+  MobileDateContainer,
+  MobileDatesContainer,
+  MobileDateTimeContainer,
+  MobileHourButton,
+  MobileReservationContainer,
+  MobileTitle,
+  MobileVisitPickContainer,
   ReservationContainer,
   Title,
   VisitPickContainer,
@@ -60,59 +70,123 @@ export const ReservationPage = () => {
     };
     navigate("/rezerwacja/podsumowanie", { state: reservation });
   };
-
   return location.state === null ? (
     <MainContent>
       Nie możesz dokonać rezerwacji bez wcześniejszego wybrania lekarza
     </MainContent>
   ) : (
-    <MainContent>
-      <ReservationContainer>
-        <form>
-          <Container>
-            <VisitPickContainer>
-              <Title>Typ wizyty</Title>
-              <Select
-                value={selectedOption}
-                onChange={handleSelectChange}
-                options={visitOptions}
-              />
-            </VisitPickContainer>
-            <DatesContainer>
-              {location.state.availableTimes.map(
-                (at: AvailableTimes, index) => (
-                  <DateTimeContainer key={index}>
-                    <Title>
-                      {at.date
-                        .toLocaleString()
-                        .substring(0, at.date.toLocaleString().indexOf(","))}
-                    </Title>
-                    <DateContainer>
-                      {at.hours.map((hour) => (
-                        <HourButton
-                          $picked={
-                            pickedTime?.date === at.date &&
-                            pickedTime.hour === hour
-                          }
-                          key={`${at.date}-${hour}`}
-                          onClick={() => handleButtonClick(at.date, hour)}
-                          type={"button"}
-                        >
-                          {hour}
-                        </HourButton>
-                      ))}
-                    </DateContainer>
-                  </DateTimeContainer>
-                ),
-              )}
-            </DatesContainer>
-          </Container>
-        </form>
-        <Title>Koszt: {prices[selectedOption.value]} PLN</Title>
-        {pickedTime && (
-          <Button onClick={handleReservationButton}>Zarezerwuj</Button>
-        )}
-      </ReservationContainer>
-    </MainContent>
+    <>
+      <BrowserView>
+        <MainContent>
+          <ReservationContainer>
+            <form>
+              <Container>
+                <VisitPickContainer>
+                  <Title>Typ wizyty</Title>
+                  <Select
+                    value={selectedOption}
+                    onChange={handleSelectChange}
+                    options={visitOptions}
+                  />
+                </VisitPickContainer>
+                <DatesContainer>
+                  {location.state.availableTimes.map(
+                    (at: AvailableTimes, index) => (
+                      <DateTimeContainer key={index}>
+                        <Title>
+                          {at.date
+                            .toLocaleString()
+                            .substring(
+                              0,
+                              at.date.toLocaleString().indexOf(","),
+                            )}
+                        </Title>
+                        <DateContainer>
+                          {at.hours.map((hour) => (
+                            <HourButton
+                              $picked={
+                                pickedTime?.date === at.date &&
+                                pickedTime.hour === hour
+                              }
+                              key={`${at.date}-${hour}`}
+                              onClick={() => handleButtonClick(at.date, hour)}
+                              type={"button"}
+                            >
+                              {hour}
+                            </HourButton>
+                          ))}
+                        </DateContainer>
+                      </DateTimeContainer>
+                    ),
+                  )}
+                </DatesContainer>
+              </Container>
+            </form>
+            <Title>Koszt: {prices[selectedOption.value]} PLN</Title>
+            {pickedTime && (
+              <Button onClick={handleReservationButton}>Zarezerwuj</Button>
+            )}
+          </ReservationContainer>
+        </MainContent>
+      </BrowserView>
+      <MobileView>
+        <MainContent>
+          <MobileReservationContainer>
+            <form>
+              <MobileContainer>
+                <MobileVisitPickContainer>
+                  <Title>Typ wizyty</Title>
+                  <Select
+                    value={selectedOption}
+                    onChange={handleSelectChange}
+                    options={visitOptions}
+                  />
+                </MobileVisitPickContainer>
+                <MobileDatesContainer>
+                  {location.state.availableTimes.map(
+                    (at: AvailableTimes, index) => (
+                      <MobileDateTimeContainer key={index}>
+                        <Title>
+                          {at.date
+                            .toLocaleString()
+                            .substring(
+                              0,
+                              at.date.toLocaleString().indexOf(","),
+                            )}
+                        </Title>
+                        <MobileDateContainer>
+                          {at.hours.map((hour) => (
+                            <MobileHourButton
+                              $picked={
+                                pickedTime?.date === at.date &&
+                                pickedTime.hour === hour
+                              }
+                              key={`${at.date}-${hour}`}
+                              onClick={() => handleButtonClick(at.date, hour)}
+                              type={"button"}
+                            >
+                              {hour}
+                            </MobileHourButton>
+                          ))}
+                        </MobileDateContainer>
+                      </MobileDateTimeContainer>
+                    ),
+                  )}
+                </MobileDatesContainer>
+              </MobileContainer>
+            </form>
+          </MobileReservationContainer>
+          <MobileContainer>
+            <MobileTitle>Koszt: {prices[selectedOption.value]} PLN</MobileTitle>
+            {pickedTime && (
+              <MobileButton onClick={handleReservationButton}>
+                Zarezerwuj
+              </MobileButton>
+            )}
+            {!pickedTime && <MobileTitle>Wybierz date wizyty!</MobileTitle>}
+          </MobileContainer>
+        </MainContent>
+      </MobileView>
+    </>
   );
 };
