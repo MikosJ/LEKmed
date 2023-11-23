@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MainContent = styled.div<{ $direction?: "row" | "column" }>`
   display: flex;
+  color: rgba(0, 97, 129, 1);
   flex-direction: column;
   justify-content: center;
   align-items: center;
