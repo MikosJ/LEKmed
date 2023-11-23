@@ -11,6 +11,7 @@ import {
   Summary,
   Title,
   Value,
+  Third,
 } from "./SummaryStyles.ts";
 import { useState } from "react";
 
@@ -23,20 +24,20 @@ export const ReservationSummary = () => {
 
   const [visitStatus, setVisitStatus] = useState(status);
 
-  const [title, setTtile] = useState("Twoja wizyta została zarezerwowana!");
+  const [title, setTtile] = useState("Twoja wizyta została zarezerwowana");
 
-  const [button, setButton] = useState("Anuluj wizyte");
+  const [button, setButton] = useState("Anuluj wizytę");
 
   function handleClick() {
-    if (button === "Anuluj wizyte") {
+    if (button === "Anuluj wizytę") {
       setVisitStatus("Anulowana");
       setTtile("Twoja wizyta została anulowana");
       setButton("Zarezerwuj");
       return;
     }
     setVisitStatus("Zarezerwowana");
-    setTtile("Twoja wizyta została zarezerwowana!");
-    setButton("Anuluj wizyte");
+    setTtile("Twoja wizyta została zarezerwowana");
+    setButton("Anuluj wizytę");
   }
 
   return (
@@ -63,7 +64,7 @@ export const ReservationSummary = () => {
           <Second>
             <Block>
               <Key>Rodzaj wizyty: </Key>
-              <Value>{location.state.visit}</Value>
+              <Value> {location.state.visit} </Value>
             </Block>
             <Block>
               <Key>Data: </Key>
@@ -72,6 +73,8 @@ export const ReservationSummary = () => {
                 {location.state.pickedTime.hour}
               </Value>
             </Block>
+          </Second>
+          <Third>
             <Block>
               <Key>Cena: </Key>
               <Value>
@@ -82,7 +85,7 @@ export const ReservationSummary = () => {
               <Key>Status: </Key>
               <Value>{visitStatus}</Value>
             </Block>
-          </Second>
+          </Third>
         </Summary>
       </ReservationContainer>
       <Button

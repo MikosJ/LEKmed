@@ -90,7 +90,7 @@ export const MobileDateContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const MobileHourButton = styled.button<{ $picked: boolean }>`
-  background: ${(props) => (props.$picked ? "rgba(33,198,255,0.6)" : "azure")};
+  background: ${(props) => (props.$picked ? "rgba(44,91,107,0.6)" : "azure")};
   padding: 20px;
   font-size: 50px;
   margin: 15px;
@@ -102,10 +102,10 @@ export const MobileHourButton = styled.button<{ $picked: boolean }>`
   border-radius: 10px;
   border: rgba(66, 189, 162, 0.5) solid 3px;
   font-weight: bold;
-  color: rgba(0, 143, 108, 0.5);
+  color: rgb(0, 56, 73);
 `;
 export const HourButton = styled.button<{ $picked: boolean }>`
-  background: ${(props) => (props.$picked ? "rgba(33,198,255,0.6)" : "azure")};
+  background: ${(props) => (props.$picked ? "rgba(44,91,107,0.6)" : "azure")};
   padding: 10px;
   margin: 3px;
   cursor: pointer;
@@ -116,20 +116,20 @@ export const HourButton = styled.button<{ $picked: boolean }>`
   border-radius: 10px;
   border: rgba(66, 189, 162, 0.5) solid 3px;
   font-weight: bold;
-  color: rgba(0, 143, 108, 0.5);
+  color: rgb(0, 56, 73);
   font-size: 20px;
 `;
 
 export const Title = styled.h2`
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.81);
+  color: rgb(0, 56, 73);
 `;
 export const MobileTitle = styled.h3`
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.81);
+  color: rgb(0, 56, 73);
   font-size: 2rem;
 `;
 export const MobileButton = styled.button`
@@ -137,7 +137,7 @@ export const MobileButton = styled.button`
     rgba(122, 237, 255, 0.5),
     rgba(185, 248, 255, 0.5)
   );
-  color: #005979;
+  color: rgb(0, 56, 73);
   border: none;
   padding: 1.5vw 2vh;
   border-radius: 8px;

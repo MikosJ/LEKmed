@@ -121,7 +121,10 @@ export const ReservationPage = () => {
                 </DatesContainer>
               </Container>
             </form>
-            <Title>Koszt: {prices[selectedOption.value]} PLN</Title>
+            <Title>
+              Koszt: {prices[selectedOption.value]} PLN, płatność tylko w
+              przychodni
+            </Title>
             {pickedTime && (
               <Button onClick={handleReservationButton}>Zarezerwuj</Button>
             )}
@@ -176,13 +179,16 @@ export const ReservationPage = () => {
             </form>
           </MobileReservationContainer>
           <MobileContainer>
-            <MobileTitle>Koszt: {prices[selectedOption.value]} PLN</MobileTitle>
+            <MobileTitle>
+              Koszt: {prices[selectedOption.value]} PLN, płatność tylko w
+              przychodni
+            </MobileTitle>
             {pickedTime && (
               <MobileButton onClick={handleReservationButton}>
                 Zarezerwuj
               </MobileButton>
             )}
-            {!pickedTime && <MobileTitle>Wybierz date wizyty!</MobileTitle>}
+            {!pickedTime && <MobileTitle>Wybierz datę wizyty!</MobileTitle>}
           </MobileContainer>
         </MainContent>
       </MobileView>

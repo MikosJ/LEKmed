@@ -9,7 +9,10 @@ export const Header = () => {
       <Logo src={"../svg/logo.svg"}></Logo>
       <BarSection>
         <HeaderText href={"/"}>Strona główna</HeaderText>
-        <HeaderText href={"//x.com"} target={"_blank"}>
+        <HeaderText
+          href={"https://twitter.com/nfz_gov_pl?lang=en"}
+          target={"_blank"}
+        >
           Twitter
         </HeaderText>
         <HeaderText href={"https://www.nfz.gov.pl/"} target={"_blank"}>
