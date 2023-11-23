@@ -37,7 +37,6 @@ import { patient } from "../../hardcoded/patient";
 export const ReservationPage = () => {
   const navigate = useNavigate();
   const location: Location<Doctor> = useLocation();
-
   const [selectedOption, setSelectedOption] = useState<{
     value: Visit;
     label: string;

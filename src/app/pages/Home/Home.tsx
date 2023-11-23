@@ -3,7 +3,6 @@ import { MainContent } from "../../styledComponents/MainContent/MainContent.ts";
 import { HomeDescription, HomeTitle } from "./HomeTitle.ts";
 import { doctors } from "../../hardcoded/doctors.ts";
 import { CardContainer } from "./Card/CardStyles.ts";
-// import doctors from "../../hardcoded/doctors.json";
 
 export const HomePage = () => {
   return (

@@ -21,7 +21,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         />
         <Route path={"*"} element={<PageNotFound />} />
       </Routes>
-      {/*<Footer />*/}
     </BrowserRouter>
   </React.StrictMode>,
 );
